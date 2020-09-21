@@ -22,7 +22,7 @@
 #define ROCRAND_RNG_DISTRIBUTION_DEVICE_DISTRIBUTIONS_H_
 
 #ifndef FQUALIFIERS
-#define FQUALIFIERS __forceinline__ __device__ __host__
+#define FQUALIFIERS __forceinline__ __device__
 #endif
 
 #include "../device_engines.hpp"

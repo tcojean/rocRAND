@@ -45,7 +45,7 @@ typedef mtgp32_fast_params mtgp32_fast_param_t;
  * - HIPRAND_STATUS_ALLOCATION_FAILED if parameters could not be loaded
  * - HIPRAND_STATUS_SUCCESS if parameters are loaded
  */
-inline __host__
+inline
 hiprandStatus_t hiprandMakeMTGP32Constants(const mtgp32_params_fast_t params[],
                                            mtgp32_kernel_params_t * p)
 {
@@ -70,7 +70,7 @@ hiprandStatus_t hiprandMakeMTGP32Constants(const mtgp32_params_fast_t params[],
  * - HIPRAND_STATUS_ALLOCATION_FAILED if states could not be initialized
  * - HIPRAND_STATUS_SUCCESS if states are initialized
  */
-inline __host__
+inline
 hiprandStatus_t hiprandMakeMTGP32KernelState(hiprandStateMtgp32_t *s,
                                              mtgp32_params_fast_t params[],
                                              mtgp32_kernel_params_t *k,
@@ -87,7 +87,7 @@ hiprandStatus_t hiprandMakeMTGP32KernelState(hiprandStateMtgp32_t *s,
 #include "hiprand_kernel.h"
 #include <curand_mtgp32_host.h>
 
-__forceinline__ __host__
+__forceinline__
 hiprandStatus_t hiprandMakeMTGP32Constants(const mtgp32_params_fast_t params[],
                                            mtgp32_kernel_params_t * p)
 {
@@ -96,7 +96,7 @@ hiprandStatus_t hiprandMakeMTGP32Constants(const mtgp32_params_fast_t params[],
     );
 }
 
-__forceinline__ __host__
+__forceinline__
 hiprandStatus_t hiprandMakeMTGP32KernelState(hiprandStateMtgp32_t *s,
                                              mtgp32_params_fast_t params[],
                                              mtgp32_kernel_params_t *k,

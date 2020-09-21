@@ -83,10 +83,10 @@ namespace detail {
         typedef ::rocrand_device::philox4x32_10_engine base_type;
         typedef base_type::philox4x32_10_state state_type;
 
-        __forceinline__ __device__ __host__
+        __forceinline__ __device__
         philox4x32_10_device_engine() { }
 
-        __forceinline__ __device__ __host__
+        __forceinline__ __device__
         philox4x32_10_device_engine(const unsigned long long seed,
                                     const unsigned long long subsequence,
                                     const unsigned long long offset)
@@ -95,10 +95,10 @@ namespace detail {
 
         }
 
-        __forceinline__ __device__ __host__
+        __forceinline__ __device__
         ~philox4x32_10_device_engine () {}
 
-        __forceinline__ __device__ __host__
+        __forceinline__ __device__
         uint4 next4_leap(unsigned int leap)
         {
             uint4 ret = m_state.result;

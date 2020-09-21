@@ -22,7 +22,7 @@
 #define ROCRAND_RNG_COMMON_H_
 
 #ifndef FQUALIFIERS
-#define FQUALIFIERS __forceinline__ __device__ __host__
+#define FQUALIFIERS __forceinline__ __device__
 #endif
 
 #include <rocrand_common.h>

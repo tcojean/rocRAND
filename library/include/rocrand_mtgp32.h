@@ -374,7 +374,7 @@ typedef rocrand_device::mtgp32_params mtgp32_params;
  * - ROCRAND_STATUS_ALLOCATION_FAILED if states could not be initialized
  * - ROCRAND_STATUS_SUCCESS if states are initialized
  */
-__host__ inline
+ inline
 rocrand_status rocrand_make_state_mtgp32(rocrand_state_mtgp32 * d_state,
                                          mtgp32_fast_params params[],
                                          int n,
@@ -427,7 +427,7 @@ rocrand_status rocrand_make_state_mtgp32(rocrand_state_mtgp32 * d_state,
  * - ROCRAND_STATUS_ALLOCATION_FAILED if parameters could not be loaded
  * - ROCRAND_STATUS_SUCCESS if parameters are loaded
  */
-__host__ inline
+ inline
 rocrand_status rocrand_make_constant(const mtgp32_fast_params params[], mtgp32_params * p)
 {
     const int block_num = MTGP_BN_MAX;

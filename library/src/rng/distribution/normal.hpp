@@ -41,11 +41,11 @@ struct normal_distribution<float>
     const float mean;
     const float stddev;
 
-    __host__ __device__
+     __device__
     normal_distribution(float mean, float stddev)
         : mean(mean), stddev(stddev) {}
 
-    __host__ __device__
+     __device__
     void operator()(const unsigned int (&input)[2], float (&output)[2]) const
     {
         float2 v = rocrand_device::detail::normal_distribution2(input[0], input[1]);
@@ -63,11 +63,11 @@ struct normal_distribution<double>
     const double mean;
     const double stddev;
 
-    __host__ __device__
+     __device__
     normal_distribution(double mean, double stddev)
         : mean(mean), stddev(stddev) {}
 
-    __host__ __device__
+     __device__
     void operator()(const unsigned int (&input)[4], double (&output)[2]) const
     {
         double2 v = rocrand_device::detail::normal_distribution_double2(
@@ -87,11 +87,11 @@ struct normal_distribution<__half>
     const __half2 mean;
     const __half2 stddev;
 
-    __host__ __device__
+     __device__
     normal_distribution(__half mean, __half stddev)
         : mean(mean, mean), stddev(stddev, stddev) {}
 
-    __host__ __device__
+     __device__
     void operator()(const unsigned int (&input)[1], __half (&output)[2]) const
     {
         __half2 v = rocrand_device::detail::normal_distribution_half2(input[0]);
@@ -119,11 +119,11 @@ struct mrg_normal_distribution<float>
     const float mean;
     const float stddev;
 
-    __host__ __device__
+     __device__
     mrg_normal_distribution(float mean, float stddev)
         : mean(mean), stddev(stddev) {}
 
-    __host__ __device__
+     __device__
     void operator()(const unsigned int (&input)[2], float (&output)[2]) const
     {
         float2 v = rocrand_device::detail::mrg_normal_distribution2(input[0], input[1]);
@@ -141,11 +141,11 @@ struct mrg_normal_distribution<double>
     const double mean;
     const double stddev;
 
-    __host__ __device__
+     __device__
     mrg_normal_distribution(double mean, double stddev)
         : mean(mean), stddev(stddev) {}
 
-    __host__ __device__
+     __device__
     void operator()(const unsigned int (&input)[2], double (&output)[2]) const
     {
         double2 v = rocrand_device::detail::mrg_normal_distribution_double2(input[0], input[1]);
@@ -163,11 +163,11 @@ struct mrg_normal_distribution<__half>
     const __half2 mean;
     const __half2 stddev;
 
-    __host__ __device__
+     __device__
     mrg_normal_distribution(__half mean, __half stddev)
         : mean(mean, mean), stddev(stddev, stddev) {}
 
-    __host__ __device__
+     __device__
     void operator()(const unsigned int (&input)[1], __half (&output)[2]) const
     {
         __half2 v = rocrand_device::detail::mrg_normal_distribution_half2(input[0]);
@@ -192,11 +192,11 @@ struct sobol_normal_distribution<float>
     const float mean;
     const float stddev;
 
-    __host__ __device__
+     __device__
     sobol_normal_distribution(float mean, float stddev)
         : mean(mean), stddev(stddev) {}
 
-    __host__ __device__
+     __device__
     float operator()(const unsigned int x) const
     {
         float v = rocrand_device::detail::normal_distribution(x);
@@ -210,11 +210,11 @@ struct sobol_normal_distribution<double>
     const double mean;
     const double stddev;
 
-    __host__ __device__
+     __device__
     sobol_normal_distribution(double mean, double stddev)
         : mean(mean), stddev(stddev) {}
 
-    __host__ __device__
+     __device__
     double operator()(const unsigned int x) const
     {
         double v = rocrand_device::detail::normal_distribution_double(x);
@@ -228,11 +228,11 @@ struct sobol_normal_distribution<__half>
     const __half mean;
     const __half stddev;
 
-    __host__ __device__
+     __device__
     sobol_normal_distribution(__half mean, __half stddev)
         : mean(mean), stddev(stddev) {}
 
-    __host__ __device__
+     __device__
     __half operator()(const unsigned int x) const
     {
         float v = rocrand_device::detail::normal_distribution(x);

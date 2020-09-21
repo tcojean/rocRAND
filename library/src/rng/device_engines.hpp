@@ -22,7 +22,7 @@
 #define ROCRAND_RNG_DEVICE_ENGINES_H_
 
 #ifndef FQUALIFIERS
-#define FQUALIFIERS __forceinline__ __device__ __host__
+#define FQUALIFIERS __forceinline__ __device__
 #endif
 
 #define ROCRAND_DETAIL_PHILOX_BM_NOT_IN_STATE

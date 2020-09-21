@@ -154,7 +154,7 @@ struct mrg_poisson_distribution
         : dis(dis)
     { }
 
-    __host__ __device__
+    __device__
     void operator()(const unsigned int (&input)[1], unsigned int (&output)[1]) const
     {
         // Alias method requires x in [0, 1), uint must be in [0, UINT_MAX],
